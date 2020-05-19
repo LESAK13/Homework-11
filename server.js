@@ -38,10 +38,8 @@ app.get("/", function(req, res) {
 
   app.delete("/api/notes/:id", function(req,res) {
     var chosen = req.params.id;
-  
-    console.log(chosen);
-    newNotes = [];
-    wasDeleted = false;
+    var newNotes = [];
+    var wasDeleted = false;
     for (var i = 0; i < notes.length; i++) {
       if (chosen != notes[i].title) {
         newNotes.push(notes[i])
